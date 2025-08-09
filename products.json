@@ -1,0 +1,63 @@
+[
+  {
+    "id": "sazabi-ff-01",
+    "title": "Chogokin MSN-04FF Sazabi",
+    "brand": "Tamashii Nations",
+    "category": "Diecast Figure",
+    "price": 999.0,
+    "compare_at_price": 1150.0,
+    "currency": "NZD",
+    "thumbnail": "assets/placeholder.svg",
+    "images": [
+      "assets/placeholder.svg"
+    ],
+    "stock": 3,
+    "sku": "SAZABI-FF-NZ",
+    "tags": [
+      "limited",
+      "light-up",
+      "diecast"
+    ],
+    "description": "Diecast Sazabi with multi-tone red finish, markings, and head LEDs."
+  },
+  {
+    "id": "pg-phenex-02",
+    "title": "PG Unicorn Gundam 03 Phenex",
+    "brand": "Bandai",
+    "category": "Model Kit",
+    "price": 749.0,
+    "compare_at_price": null,
+    "currency": "NZD",
+    "thumbnail": "assets/placeholder.svg",
+    "images": [
+      "assets/placeholder.svg"
+    ],
+    "stock": 5,
+    "sku": "PG-PHENEX-NZ",
+    "tags": [
+      "perfect-grade",
+      "gold-plated"
+    ],
+    "description": "Perfect Grade Phenex with gold finish and psycho-frame details."
+  },
+  {
+    "id": "airbrush-03",
+    "title": "Dual-Action Airbrush Set",
+    "brand": "Neo Tools",
+    "category": "Tools",
+    "price": 129.0,
+    "compare_at_price": 159.0,
+    "currency": "NZD",
+    "thumbnail": "assets/placeholder.svg",
+    "images": [
+      "assets/placeholder.svg"
+    ],
+    "stock": 12,
+    "sku": "AB-SET-NEO",
+    "tags": [
+      "airbrush",
+      "starter"
+    ],
+    "description": "Complete dual-action airbrush starter kit for hobby painting."
+  }
+]
