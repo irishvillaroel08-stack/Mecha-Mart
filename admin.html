@@ -1,43 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin Panel</title>
 
-  <!-- Keep the page hidden until we confirm auth -->
   <style>
-    body { display: none; font-family: system-ui, Arial, sans-serif; padding: 24px; }
-    h1 { margin: 0 0 8px; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: system-ui, Arial, sans-serif; padding: 24px; display: none; }
+    h1 { margin: 0 0 12px; }
+    .note { color: #666; }
   </style>
 
   <script>
-  (function () {
-    // CHANGE THIS WHEN YOU WANT A NEW PASSWORD:
-    const PASS = 'Gundam2526!';           // <-- current password
-    const KEY  = 'mm_admin_ok';
+    (function () {
+      // 🔐 CHANGE THIS to your password if you want:
+      var PASSWORD = "Gundam2526!";
 
-    // If not already OK, ask for password
-    if (localStorage.getItem(KEY) !== '1') {
-      const input = prompt('Enter Admin password:');
-      if (input === PASS) {
-        localStorage.setItem(KEY, '1');   // remember until you clear it
-      } else {
-        // wrong → bounce back to homepage
-        location.replace('index.html');
+      // Ask once; if wrong or canceled, go back to the homepage
+      var input = prompt("Enter Admin password:");
+      if (input !== PASSWORD) {
+        location.replace("index.html");
         return;
       }
-    }
 
-    // show the page only after auth passes
-    document.addEventListener('DOMContentLoaded', function () {
-      document.body.style.display = 'block';
-    });
-  })();
+      // Show page content only after correct password
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.display = "block";
+      });
+    })();
   </script>
 </head>
+
 <body>
   <h1>Admin Dashboard</h1>
-  <p>Only authorized users can see this page.</p>
+  <p class="note">Only authorized users can see this page.</p>
 </body>
 </html>
