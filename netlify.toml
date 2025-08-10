@@ -1,9 +1,7 @@
 [build]
-  functions = "netlify/functions"
-  publish = "."
+publish = "."
+
 [[headers]]
-  for = "/admin.html"
+for = "/admin.html"
   [headers.values]
-    Basic-Auth = "irish:Gundam$2025"
-    X-Robots-Tag = "noindex"
-    
+  Basic-Auth = "irish:Gundam$2025"
