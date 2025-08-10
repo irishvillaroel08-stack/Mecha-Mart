@@ -1,12 +1,24 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Mecha Mart — NZ storefront for model kits and collectibles.'><link rel='icon' href='assets/favicon.svg' type='image/svg+xml'><link rel='stylesheet' href='css/styles.css'><title>Mecha Mart</title><script defer src='js/app.js'></script></head><body><header class='nav'><div class='container nav-inner'><a class='brand' href='index.html'><img src='assets/logo.svg' alt='logo' width='96'><span>Mecha Mart</span></a><div class='searchbar'><svg width='16' height='16' viewBox='0 0 24 24' fill='none'><path d='M21 21l-4.3-4.3' stroke='#8a8aa3' stroke-width='2' stroke-linecap='round'/><circle cx='11' cy='11' r='7' stroke='#8a8aa3' stroke-width='2'/></svg><input id='search' placeholder='Search products… (brand, kit, tag)'></div><a class='icon-btn' href='admin.html'>Admin</a><a class='icon-btn' href='cart.html'>Cart <span class='badge' data-cart-count style='display:none'>0</span></a></div></header><main class='container'><h1>Admin — Products</h1><p class='notice'>Load your current products.json, edit inline, then download and replace it on the server.</p><div class='controls'><input type='file' id='file' class='field'><button class='btn' id='add'>Add new</button><button class='btn' id='download'>Download JSON</button></div><div id='table'></div><script defer src='js/admin.js'></script></main><footer class='footer'><div class='container footer-inner'><div>© <span id='year'></span> Mecha Mart · NZ</div><div class='notice'>Stripe enabled via Netlify Function.</div></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html><script>
-  (function () {
-    const OK = localStorage.getItem('mm_admin_ok') === '1';
-    if (OK) return;
-    const pass = prompt('Admin password');
-    if (pass === 'Gundam$2025') {
-      localStorage.setItem('mm_admin_ok', '1');
-      return;
-    }
-    location.href = 'index.html';
-  })();
-</script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <script>
+    (function () {
+      const OK = localStorage.getItem('mm_admin_ok') === '1';
+      if (OK) return;
+      const pass = prompt('Admin password:');
+      if (pass === 'Gundam2526') {
+        localStorage.setItem('mm_admin_ok', '1');
+        return;
+      }
+      location.href = 'index.html';
+    })();
+  </script>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <p>Only authorized users can see this page.</p>
+</body>
+</html>
